@@ -45,7 +45,7 @@ pipeline
                                             junit '**/target/surefire-reports/*.xml'
 
                                             publishHTML(target: [
-                                                                reportDir: 'target/html-report',
+                                                                reportDir: 'target/surefire-reports',
                                                                 reportFiles: 'index.html',
                                                                 reportName: 'Test Report',
                                                                 keepAll: true,
