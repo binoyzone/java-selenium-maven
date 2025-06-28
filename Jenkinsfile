@@ -1,0 +1,62 @@
+pipeline
+    {
+        agent any
+            {
+                tools
+                    {
+                        maven 'Maven_3_9_10'
+                        jdk 'Java_17'
+                    }
+                environment
+                    {
+                        BROWSER = 'chrome'
+                    }
+                stages
+                    {
+                        stage('Checkout')
+                            {
+                                steps
+                                    {
+                                        //git ''
+                                        echo 'Checkout'
+                                    }
+                            }
+                        stage('Build')
+                            {
+                                steps
+                                    {
+                                        echo 'Build'
+                                        //sh 'mvn clean compile'
+                                    }
+                            }
+                        stage('Run Tests')
+                            {
+                                steps
+                                    {
+                                        echo 'Test'
+                                        //sh 'mvn test'
+                                    }
+                            }
+                            stage('Report')
+                                {
+                                    steps
+                                        {
+                                            echo 'Report'
+                                            //junit '**/target/surefire-reports/*.xml'
+                                        }
+                                 }
+                         }
+                         post
+                            {
+                                always
+                                    {
+                                        echo 'Pipeline finished'
+                                    }
+                                failure
+                                    {
+                                        echo 'Build failed'
+                                    }
+                            }
+                    }
+            }
+    }
