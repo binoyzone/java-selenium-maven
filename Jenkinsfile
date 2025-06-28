@@ -26,7 +26,7 @@ pipeline
                                 steps
                                     {
                                         echo 'Build'
-                                        //sh 'mvn clean compile'
+                                        sh 'mvn clean compile'
                                     }
                             }
                         stage('Run Tests')
@@ -34,7 +34,7 @@ pipeline
                                 steps
                                     {
                                         echo 'Test'
-                                        //sh 'mvn test'
+                                        sh 'mvn test'
                                     }
                             }
                             stage('Report')
