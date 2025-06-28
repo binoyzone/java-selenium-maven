@@ -42,7 +42,7 @@ pipeline
                                     steps
                                         {
                                             echo 'Report'
-                                            //junit '**/target/surefire-reports/*.xml'
+                                            junit '**/target/surefire-reports/*.xml'
                                         }
                                  }
                          }
