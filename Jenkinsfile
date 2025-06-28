@@ -43,6 +43,15 @@ pipeline
                                         {
                                             echo 'Report'
                                             junit '**/target/surefire-reports/*.xml'
+
+                                            publishHTML(target: [
+                                                                reportDir: 'target/html-report',
+                                                                reportFiles: 'index.html',
+                                                                reportName: 'Test Report',
+                                                                keepAll: true,
+                                                                alwaysLinkToLastBuild: true,
+                                                                allowMissing: false
+                                                            ])
                                         }
                                  }
                          }
