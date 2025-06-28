@@ -17,7 +17,7 @@ pipeline
                             {
                                 steps
                                     {
-                                        git 'https://github.com/binoyzone/java-selenium-maven'
+                                        git branch : 'main', url: 'https://github.com/binoyzone/java-selenium-maven'
                                         echo 'Checkout'
                                     }
                             }
