@@ -2,11 +2,11 @@ pipeline
     {
         agent any
 
-//                 tools
-//                     {
-//                         //maven 'Maven_3_9_10'
-//                         //jdk 'Java_17'
-//                     }
+                tools
+                    {
+                        maven 'Maven_3_9_10'
+                        jdk 'Java_21'
+                    }
                 environment
                     {
                         BROWSER = 'chrome'
