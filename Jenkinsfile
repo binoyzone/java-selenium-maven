@@ -5,7 +5,7 @@ pipeline
                 tools
                     {
                         maven 'Maven_3_9_10'
-                        jdk 'Java_21'
+                        jdk 'JDK_21'
                     }
                 environment
                     {
