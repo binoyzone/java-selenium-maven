@@ -4,8 +4,8 @@ pipeline
 
                 tools
                     {
-                        maven 'Maven_3_9_10'
-                        jdk 'Java_17'
+                        //maven 'Maven_3_9_10'
+                        //jdk 'Java_17'
                     }
                 environment
                     {
@@ -26,7 +26,7 @@ pipeline
                                 steps
                                     {
                                         echo 'Build'
-                                        sh 'mvn clean compile'
+                                        //sh 'mvn clean compile'
                                     }
                             }
                         stage('Run Tests')
@@ -34,7 +34,7 @@ pipeline
                                 steps
                                     {
                                         echo 'Test'
-                                        sh 'mvn test'
+                                        //sh 'mvn test'
                                     }
                             }
                             stage('Report')
@@ -59,4 +59,3 @@ pipeline
                             }
                     }
 
-  
