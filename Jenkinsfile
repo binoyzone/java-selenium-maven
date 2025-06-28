@@ -1,7 +1,7 @@
 pipeline
     {
         agent any
-            {
+
                 tools
                     {
                         maven 'Maven_3_9_10'
@@ -58,5 +58,5 @@ pipeline
                                     }
                             }
                     }
-            }
+
     }
